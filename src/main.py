@@ -9,14 +9,14 @@ class Categories:
     HUMAN = 'HUMAN'
     AI = 'AI'
 
-textFromFile = open('data.txt', encoding="utf8")
+textFromFile = open('training_data.txt', encoding="utf8")
 text = textFromFile.read()
 text = text.split('@')
 
-train_x = [text[0], text[1], text[2], text[3], text[4], text[5], text[6], text[7], text[8], text[9], text[10], text[11], text[12]]
+train_x = [text[0], text[1], text[2], text[3], text[4], text[5], text[6], text[7], text[8], text[9], text[10], text[11], text[12],text[13]]
 train_y = [Categories.AI, Categories.AI, Categories.HUMAN, Categories.HUMAN, Categories.HUMAN,
             Categories.AI, Categories.AI, Categories.AI, Categories.HUMAN, Categories.HUMAN, 
-            Categories.AI, Categories.HUMAN, Categories.AI]
+            Categories.AI, Categories.HUMAN, Categories.AI, Categories.HUMAN]
 
 vectorizer = CountVectorizer(binary=True)
 clf_svm = svm.SVC(kernel='linear')
