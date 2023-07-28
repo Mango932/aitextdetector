@@ -1,0 +1,35 @@
+.container {
+    height: 100px;
+    background-color: rgb(137, 231, 145);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px;
+}
+
+text {
+    color: rgb(103, 103, 103);
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    font-size: 50px;
+}
+
+.subTitle {
+    font-size: 30px;
+    margin-left: 60px;
+    display: inline-block;
+}
+
+.subTitle::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: rgb(103, 103, 103);
+    transition: 0.3s;
+}
+
+.subTitle:hover::after {
+    width: 100%;
+}
